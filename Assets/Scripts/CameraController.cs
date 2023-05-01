@@ -14,8 +14,8 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //transform.position = new Vector3(target.position.x, 22f, target.position.z -12f);
-        transform.position = new Vector3(Mathf.Clamp(target.position.x, minPos.x, maxPos.x), 22f, Mathf.Clamp(target.position.z -12f, minPos.z, maxPos.z));
+        transform.position = new Vector3(target.position.x, 22f, target.position.z -12f);
+        //transform.position = new Vector3(Mathf.Clamp(target.position.x, minPos.x, maxPos.x), 22f, Mathf.Clamp(target.position.z -12f, minPos.z, maxPos.z));
     }
 
     private void Move(float xAxis, float zAxis)

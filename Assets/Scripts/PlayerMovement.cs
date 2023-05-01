@@ -183,11 +183,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        //moveDirection = orientation.forward * _verticalInput + orientation.right * _horizontalInput;
         Vector3 moveInput = new Vector3(_horizontalInput, 0f, _verticalInput).normalized;
 
         myRb.AddForce(moveInput * _moveSpeed * 10f, ForceMode.Force);
-
     }
 
     private void LookAround()
