@@ -62,9 +62,14 @@ public class RangedZombie : Enemy
             if (attackCounter <= 0)
             {
                 attackCounter = _attackDelay;
-                var bala = Instantiate(bullet, pointToShoot.position, pointToShoot.rotation);
-                if(bala.GetComponent<AcidZombieBullet>())
-                    bala.GetComponent<Rigidbody>().velocity = pointToShoot.forward * bala.GetComponent<AcidZombieBullet>().GetSpeed();
+                /*var bala = Instantiate(bullet, pointToShoot.position, pointToShoot.rotation);*/
+                var bala = AcidBulletFactory.Instance.GetObject();
+                bala.transform.position = pointToShoot.position;
+                bala.transform.rotation = pointToShoot.rotation;
+                var balaComp = bala.GetComponent<AcidZombieBullet>();
+                if(balaComp)
+                    bala.GetComponent<Rigidbody>().velocity = pointToShoot.forward * balaComp.GetSpeed();
+                Debug.Log("attack");
             }
         }
         else

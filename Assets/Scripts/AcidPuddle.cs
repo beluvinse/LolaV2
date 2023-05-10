@@ -14,11 +14,11 @@ public class AcidPuddle : MonoBehaviour
 
     void FixedUpdate()
     {
-        contador += Time.deltaTime;
+        contador += Time.fixedDeltaTime;
         if (contador >= _time)
         {
             _isOnPuddle = false;
-            Destroy(this.gameObject);
+            AcidPuddleFactory.Instance.ReturnPuddle(this);
         }
 
         if (_isOnPuddle)
@@ -26,6 +26,22 @@ public class AcidPuddle : MonoBehaviour
             StartCoroutine(Acid());
         }
 
+    }
+
+    private void Reset()
+    {
+        contador = 0f;
+    }
+
+    public static void TurnOn(AcidPuddle b)
+    {
+        b.Reset();
+        b.gameObject.SetActive(true);
+    }
+
+    public static void TurnOff(AcidPuddle b)
+    {
+        b.gameObject.SetActive(false);
     }
 
    
