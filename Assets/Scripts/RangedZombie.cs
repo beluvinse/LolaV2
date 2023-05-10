@@ -25,7 +25,7 @@ public class RangedZombie : Enemy
     {
         _myAnim = GetComponentInChildren<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        player = FindObjectOfType<PlayerMovement>().transform;
+        player = FindObjectOfType<PlayerMovement>().transform;// cambiar
         _myAnim.SetBool("moving", false);
     }
 
@@ -61,15 +61,30 @@ public class RangedZombie : Enemy
             attackCounter -= Time.fixedDeltaTime;
             if (attackCounter <= 0)
             {
+                if(type == TypeOfEnemy.RangedAcid)
+                {
+                    var bala = AcidBulletFactory.Instance.GetObject();
+                    bala.transform.position = pointToShoot.position;
+                    bala.transform.rotation = pointToShoot.rotation;
+                    var balaComp = bala.GetComponent<AcidZombieBullet>();
+                    if (balaComp)
+                        bala.GetComponent<Rigidbody>().velocity = pointToShoot.forward * balaComp.GetSpeed();
+                    Debug.Log("attack");
+                }
+                else if(type == TypeOfEnemy.Ranged)
+                {
+                    var bala = ZombieBulletFactory.Instance.GetObject();
+                    bala.transform.position = pointToShoot.position;
+                    bala.transform.rotation = pointToShoot.rotation;
+                    var balaComp = bala.GetComponent<ZombieBullet>();
+                    if (balaComp)
+                        bala.GetComponent<Rigidbody>().velocity = pointToShoot.forward * balaComp.GetSpeed();
+                    Debug.Log("attack");
+                }
                 attackCounter = _attackDelay;
                 /*var bala = Instantiate(bullet, pointToShoot.position, pointToShoot.rotation);*/
-                var bala = AcidBulletFactory.Instance.GetObject();
-                bala.transform.position = pointToShoot.position;
-                bala.transform.rotation = pointToShoot.rotation;
-                var balaComp = bala.GetComponent<AcidZombieBullet>();
-                if(balaComp)
-                    bala.GetComponent<Rigidbody>().velocity = pointToShoot.forward * balaComp.GetSpeed();
-                Debug.Log("attack");
+                
+                
             }
         }
         else

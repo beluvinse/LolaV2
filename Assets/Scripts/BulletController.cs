@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : ZombieBullet
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private float _damage;
+
     [SerializeField] private string hitTag;
 
 

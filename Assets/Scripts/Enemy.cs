@@ -10,6 +10,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float _life;
     [SerializeField] protected float _maxLife;
     [SerializeField] protected float _damage;
+    [SerializeField] protected TypeOfEnemy type;
     [SerializeField] private AudioClip _takeDamageSFX;
     private AudioSource _myAudioSource;
     protected NavMeshAgent _navMeshAgent;
@@ -44,4 +45,13 @@ public abstract class Enemy : MonoBehaviour
     { 
         Destroy(this.gameObject);
     }
+
+
+}
+
+public enum TypeOfEnemy{
+    Melee,
+    Ranged,
+    RangedAcid
+
 }
