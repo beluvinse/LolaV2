@@ -3393,7 +3393,7 @@ GameObject:
   - component: {fileID: 6097635336344085766}
   - component: {fileID: 6097635336344087289}
   - component: {fileID: 4272974224442439472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieRango
   m_TagString: Enemy
   m_Icon: {fileID: 0}

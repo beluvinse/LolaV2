@@ -2114,7 +2114,7 @@ GameObject:
   - component: {fileID: 7105606525259101837}
   - component: {fileID: 7105606525259102578}
   - component: {fileID: 959177789257688251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ZombieRangoAcido
   m_TagString: Enemy
   m_Icon: {fileID: 0}

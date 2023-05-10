@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
+    FieldOfView fov;
+
     [SerializeField] private GameObject _bulletTrail;
     [SerializeField] private float _shotDelay;
     [SerializeField] private float _weaponRange = 25f;
     [SerializeField] private float _weaponDmg = 25f;
     [SerializeField] private Animator _muzzleFlashAnim;
     [SerializeField] private LayerMask _layerMask;
+    [SerializeField] private LayerMask _obstructionMask;
     public GameObject player;
 
     [SerializeField] private Vector3 shootingRay;
@@ -25,6 +28,11 @@ public class GunController : MonoBehaviour
     private bool isFiring;
 
     public GameObject buffParticles;
+    public float weaponRange { get { return _weaponRange; } }
+    public LayerMask layerMask { get { return _layerMask; } }
+    public LayerMask obstructionMask { get { return _obstructionMask; } }
+
+
 
 
     public float GetShotDelay()
@@ -61,9 +69,10 @@ public class GunController : MonoBehaviour
 
     void Start()
     {
+        fov = GetComponent<FieldOfView>();
         _currentAmmo = maxAmmo;
-        player = GameObject.FindGameObjectWithTag("Player");
-
+        player = GameObject.FindGameObjectWithTag("Player");// cambiar
+        _weaponDmg = 25f;
     }
 
     private void Update()
@@ -77,7 +86,9 @@ public class GunController : MonoBehaviour
             if (shotCounter <= 0)
             {
                 shotCounter = _shotDelay;
-                RaycastHit hit;
+                var enemy = fov.FieldOfViewCheck();
+                if (enemy) { enemy.TakeDamage(1000); }
+                /*RaycastHit hit;
                 var trail = Instantiate(
                     _bulletTrail,
                     this.transform.position,
@@ -105,7 +116,7 @@ public class GunController : MonoBehaviour
                     Debug.Log("miss");
                     trailScript.SetTargetPosition(this.transform.position + transform.TransformDirection(Vector3.forward) * _weaponRange);
                 }
-
+                */
 
 
                 
@@ -137,5 +148,7 @@ public class GunController : MonoBehaviour
         Destroy(particles);
         _weaponDmg = aux;
     }
+
+
 }
 
