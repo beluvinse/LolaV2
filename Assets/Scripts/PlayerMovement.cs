@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
             MyInput();
             SpeedControl();
+            OpenDoor();
         }
 
         _gameIsPaused = pause.getPausa();
@@ -179,6 +180,19 @@ public class PlayerMovement : MonoBehaviour
     {
         _horizontalInput = Input.GetAxisRaw("Horizontal");
         _verticalInput = Input.GetAxisRaw("Vertical");
+    }
+
+    private void OpenDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, 3))
+            {
+                var door = hit.collider.GetComponent<Doors>();
+
+                if (door) { Debug.Log("abrido"); door.OpenDoor(); }
+            }
+        }
     }
 
     private void MovePlayer()

@@ -21,11 +21,22 @@ public class GodMode : MonoBehaviour
             Debug.Log("god");
             EnableGodMode();
         }
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.H))
+        {
+            Debug.Log("godn't");
+            DisableGodMode();
+        }
     }
 
     void EnableGodMode()
     {
         _cc.enabled = false;
         _rb.useGravity = false;
+    }
+
+    void DisableGodMode()
+    {
+        _cc.enabled = true;
+        _rb.useGravity = true;
     }
 }
