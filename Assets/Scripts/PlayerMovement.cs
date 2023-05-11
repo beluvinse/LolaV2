@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     public Pausa pause;
     [SerializeField] private bool _gameIsPaused;
 
+    [SerializeField] GameObject _key;
+
     public Vector3 getLookAt()
     {
         return lookAt;
@@ -132,6 +134,11 @@ public class PlayerMovement : MonoBehaviour
             isReloading = true;
 
         }
+        if(other.tag == "Key")
+        {
+            _key = other.gameObject;
+            other.gameObject.SetActive(false);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -190,7 +197,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 var door = hit.collider.GetComponent<Doors>();
 
-                if (door) { Debug.Log("abrido"); door.OpenDoor(); }
+                if (door) {
+                    if (!door.loocked)
+                    {
+                        Debug.Log("abrido");
+                        door.OpenDoor();
+                    }
+                    else if (_key)
+                    {
+                        door.UnlockDoor();
+                    }
+                    else
+                    {
+                        Debug.Log("needs key");
+                    }
+                }
+                    
+                
             }
         }
     }
