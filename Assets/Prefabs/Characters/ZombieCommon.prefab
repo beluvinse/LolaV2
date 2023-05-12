@@ -53,11 +53,12 @@ MonoBehaviour:
   _damage: 20
   type: 0
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
-  blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
+  _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
   _chaseRadius: 30
   _attackRadius: 4
   _attackDelay: 2
   _isAttacking: 0
+  blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
 --- !u!195 &5452547552819656227
 NavMeshAgent:
   m_ObjectHideFlags: 0

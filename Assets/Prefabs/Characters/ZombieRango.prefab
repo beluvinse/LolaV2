@@ -3449,12 +3449,12 @@ MonoBehaviour:
   _damage: 15
   type: 1
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
-  blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
-  player: {fileID: 0}
+  _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
   _chaseRadius: 25
   _attackRadius: 15
   _attackDelay: 1
   _isAttacking: 0
+  blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
   bullet: {fileID: 6719624991369190917, guid: 0183400d31e98e341b9750da4570bf49, type: 3}
   pointToShoot: {fileID: 6171642099409488170}
   attackAnim: {fileID: 7400000, guid: f68fe9199da9b1f4a9f8e6b8610532f2, type: 2}
