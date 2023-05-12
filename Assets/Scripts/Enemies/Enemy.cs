@@ -6,29 +6,58 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
+
+    public float MaxLife
+    {
+        get
+        {
+            return _maxLife;
+        }
+        set
+        {
+            _maxLife = Mathf.Clamp(value, 10, 200);
+        }
+    }
+
+    public float Damage
+    {
+        get
+        {
+            return _damage;
+        }
+        set
+        {
+            _damage = Mathf.Clamp(value, 10, 50);
+        }
+    }
+
     [Header("Values")]
     [SerializeField] protected float _life;
     [SerializeField] protected float _maxLife;
     [SerializeField] protected float _damage;
     [SerializeField] protected TypeOfEnemy type;
-    [SerializeField] private AudioClip _takeDamageSFX;
 
     [SerializeField] protected Transform _player;
-    private Animator _myAnim;
 
-    [Header("Values")]
+    [Header("Attack")]
     [SerializeField] protected float _chaseRadius;
     [SerializeField] protected float _attackRadius;
     [SerializeField] protected float _attackDelay;
     [SerializeField] protected bool _isAttacking;
 
-    protected float attackCounter;
+
+
+    private Animator _myAnim;
+
     private Manager _manager;
     private AudioSource _myAudioSource;
 
     protected NavMeshAgent _navMeshAgent;
+    protected float attackCounter;
 
     public GameObject blood;
+    [SerializeField] private AudioClip _takeDamageSFX;
+
 
     private void Awake()
     {

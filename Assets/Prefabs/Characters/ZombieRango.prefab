@@ -3408,7 +3408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6097635336344085764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4545283, y: 0, z: -18.3862}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3448,13 +3448,13 @@ MonoBehaviour:
   _maxLife: 120
   _damage: 15
   type: 1
-  _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
   _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
   _chaseRadius: 25
   _attackRadius: 15
   _attackDelay: 1
   _isAttacking: 0
   blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
+  _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
   bullet: {fileID: 6719624991369190917, guid: 0183400d31e98e341b9750da4570bf49, type: 3}
   pointToShoot: {fileID: 6171642099409488170}
   attackAnim: {fileID: 7400000, guid: f68fe9199da9b1f4a9f8e6b8610532f2, type: 2}
@@ -3465,7 +3465,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6097635336344085764}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5

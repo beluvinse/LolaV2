@@ -212,8 +212,6 @@ public class PlayerMovement : MonoBehaviour
                         Debug.Log("needs key");
                     }
                 }
-                    
-                
             }
         }
     }

@@ -66,7 +66,7 @@ public class HealthManager : MonoBehaviour
             {
                 _myAudioSource.Play();
             }
-            Instantiate(hurtParticle, this.gameObject.transform.position, this.gameObject.transform.rotation, this.transform);
+            //Instantiate(hurtParticle, this.gameObject.transform.position, this.gameObject.transform.rotation, this.transform);
         }
     }
 }
