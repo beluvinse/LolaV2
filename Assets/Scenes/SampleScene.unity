@@ -15776,7 +15776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraPos: {fileID: 373531312}
   minPos: {x: -59, y: 0, z: -85}
-  maxPos: {x: 50, y: 0, z: 100}
+  maxPos: {x: 80, y: 0, z: 100}
   target: {fileID: 1348377272}
 --- !u!43 &991068387
 Mesh:
@@ -17193,7 +17193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157297310}
   m_LocalRotation: {x: 1.1102231e-17, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.4552, y: -2.3849459, z: -0.8}
+  m_LocalPosition: {x: -26.4552, y: -2.3849459, z: -4.6}
   m_LocalScale: {x: 1.0034, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
