@@ -47,9 +47,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _rollDelay;
 
 
-    [SerializeField] private int _currentAmmo;
+    /*[SerializeField] private int _currentAmmo;
     [SerializeField] private int _maxAmmo;
-    private float _shotDelay;
+    private float _shotDelay;*/
 
     public Pausa pause;
     [SerializeField] private bool _gameIsPaused;
@@ -85,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
         startSpeed = _moveSpeed;
         _myAudioSource = GetComponent<AudioSource>();
         pHM = GetComponent<HealthManager>();
-        _maxAmmo = gun.getMaxAmmo();
-        _currentAmmo = _maxAmmo;
-        _shotDelay = gun.GetShotDelay();
+        //_maxAmmo = gun.getMaxAmmo();
+        //_currentAmmo = _maxAmmo;
+        //_shotDelay = gun.GetShotDelay();
     }
 
     private void Update()
@@ -124,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Ammo")
         {
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             isReloading = false;
         }
 
-    }
+    }*/
 
 
 
