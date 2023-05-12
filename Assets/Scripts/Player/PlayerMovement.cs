@@ -32,11 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GunController gun;
 
-    [Header("Audio")]
-    [SerializeField] private AudioClip _gunSFX;
-    [SerializeField] private AudioClip _reloadSFX;
-    [SerializeField] private AudioClip _noAmmoSFX;
-    private AudioSource _myAudioSource;
+    
 
     public HealthManager pHM;
     bool val = true;
@@ -56,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] GameObject _key;
 
+
+
+    private PlayerAnimation _playerAnim;
+    private PlayerSFX _playerSFX;
+
     public Vector3 getLookAt()
     {
         return lookAt;
@@ -71,19 +72,19 @@ public class PlayerMovement : MonoBehaviour
         return rollCounter;
     }
 
-    public void BuffGun(float val, float timer)
+    /*public void BuffGun(float val, float timer)
     {
         gun.BuffWeapon(val, timer);
-    }
+    }*/
 
     private void Start()
     {
+        _playerAnim = GetComponent<PlayerAnimation>();
+        _playerSFX = GetComponent<PlayerSFX>();
         myRb = GetComponent<Rigidbody>();
         myRb.freezeRotation = true;
         _mainCamera = FindObjectOfType<Camera>();
-        _myAnim = GetComponentInChildren<Animator>();
         startSpeed = _moveSpeed;
-        _myAudioSource = GetComponent<AudioSource>();
         pHM = GetComponent<HealthManager>();
         //_maxAmmo = gun.getMaxAmmo();
         //_currentAmmo = _maxAmmo;
@@ -124,16 +125,16 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    /*private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Ammo")
+        /*if(other.tag == "Ammo")
         {
             var ammoBox = other.GetComponentInParent<Reload>();
             ammoBox.ActiveUI();
 
             isReloading = true;
 
-        }
+        }*/
         if(other.tag == "Key")
         {
             _key = other.gameObject;
@@ -141,7 +142,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Ammo")
         {
@@ -174,8 +175,7 @@ public class PlayerMovement : MonoBehaviour
         if (!gun.getIsFiring())
         {
             MovePlayer();
-            _myAnim.SetFloat(_xAxisName, _horizontalInput);
-            _myAnim.SetFloat(_zAxisName, _verticalInput);
+            _playerAnim.MoveAnimation(_horizontalInput, _verticalInput);
         }
 
         if (isRolling == true)
@@ -251,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(0) && gun.getAmmo() <= 0)
         {
-            OnNoAmmo();
+            _playerSFX.OnNoAmmo();
         }
 
        if (Input.GetMouseButtonUp(0))
@@ -289,53 +289,24 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void OnShoot()
-    {
-        _myAudioSource.clip = _gunSFX;
-        if (!_myAudioSource.isPlaying && _gameIsPaused == false) //y si el juego no esta en pausa
-        {
-            _myAudioSource.Play();
-        }
-
-    }
-
-    public void OnNoAmmo()
-    {
-        _myAudioSource.clip = _noAmmoSFX;
-        if (!_myAudioSource.isPlaying)
-        {
-            _myAudioSource.Play();
-        }
-
-    }
-    public void OnReload()
-    {
-        _myAudioSource.clip = _reloadSFX;
-        if (!_myAudioSource.isPlaying)
-        {
-            _myAudioSource.Play();
-        }
-
-    }
-
     private IEnumerator crOnShoot()
     {
         _moveSpeed = 0;
-        _myAnim.SetTrigger("onShoot");
-        OnShoot();
+        _playerAnim.Trigger("onShoot");
+        _playerSFX.OnShoot(_gameIsPaused);
         yield return new WaitForSeconds(0.25f);
-        _myAnim.SetTrigger("onEndShoot");
+        _playerAnim.Trigger("onEndShoot");
         _moveSpeed = startSpeed;
     }
 
     private IEnumerator crOnRoll()
     {
         _moveSpeed = 0;
-        _myAnim.SetTrigger("onRoll");
+        _playerAnim.Trigger("onRoll");
         isRolling = true;
         pHM.setDmg(val);
         yield return new WaitForSeconds(.8f);
-        _myAnim.SetTrigger("onEndRoll");
+        _playerAnim.Trigger("onEndRoll");
         isRolling = false;
         pHM.setDmg(val);
         _moveSpeed = startSpeed;

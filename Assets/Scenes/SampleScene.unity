@@ -18887,6 +18887,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b289fe1b547264aab4548bceae261d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1348377284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642903166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e6a7fca17b9934ba213f3b20ffc636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunSFX: {fileID: 8300000, guid: e0e02ac3737006e46ae00cee0f640587, type: 3}
+  _reloadSFX: {fileID: 8300000, guid: 66f7cea8a805ba341ab3c314abccef33, type: 3}
+  _noAmmoSFX: {fileID: 8300000, guid: ebe8bb5c12a88b74facda84ebb7c49a9, type: 3}
+--- !u!114 &1348377285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642903166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594341cd321cdb241b9c86712f988511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xAxisName: xAxis
+  _zAxisName: zAxis
+  _shootAnimation: {fileID: 0}
 --- !u!43 &1367474465
 Mesh:
   m_ObjectHideFlags: 0
