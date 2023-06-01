@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
-    FieldOfView fov;
+    public FieldOfView fov;
 
     [SerializeField] private GameObject _bulletTrail;
     [SerializeField] private float _shotDelay;

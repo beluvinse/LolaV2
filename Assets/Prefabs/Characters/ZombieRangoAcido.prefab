@@ -2110,8 +2110,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7105606525259101836}
-  - component: {fileID: 7105606525259102579}
   - component: {fileID: 7105606525259101837}
+  - component: {fileID: 7105606525259102579}
   - component: {fileID: 7105606525259102578}
   - component: {fileID: 959177789257688251}
   m_Layer: 3
@@ -2138,20 +2138,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &7105606525259102579
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7105606525259101839}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.6
-  m_Height: 4.07
-  m_Direction: 1
-  m_Center: {x: 0, y: 2.23, z: 0}
 --- !u!114 &7105606525259101837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2174,10 +2160,25 @@ MonoBehaviour:
   _attackDelay: 1.5
   _isAttacking: 0
   blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
+  _mesh: {fileID: 269721264921034510}
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
   bullet: {fileID: 4338005334111246618, guid: 604b6764991bbc04baa296706bb249db, type: 3}
   pointToShoot: {fileID: 7647429111861617698}
   attackAnim: {fileID: 0}
+--- !u!136 &7105606525259102579
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105606525259101839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.6
+  m_Height: 4.07
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.23, z: 0}
 --- !u!195 &7105606525259102578
 NavMeshAgent:
   m_ObjectHideFlags: 0

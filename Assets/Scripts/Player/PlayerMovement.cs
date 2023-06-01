@@ -93,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        var check = gun.fov.FieldOfViewCheck();
         val = pHM.getDmg();
 
 
@@ -101,6 +102,11 @@ public class PlayerMovement : MonoBehaviour
             myRb.drag = groundDrag;
         else
             myRb.drag = 0;
+
+        if (check)
+        {
+            check.Reveal();
+        }
 
         if (!_gameIsPaused) 
         { 

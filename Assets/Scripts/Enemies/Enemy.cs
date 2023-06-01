@@ -56,6 +56,7 @@ public abstract class Enemy : MonoBehaviour
     protected float attackCounter;
 
     public GameObject blood;
+    [SerializeField] GameObject _mesh;
     [SerializeField] private AudioClip _takeDamageSFX;
 
 
@@ -65,6 +66,7 @@ public abstract class Enemy : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _myAnim.SetBool("moving", false);
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _mesh.SetActive(false);
     }
 
     private void Start()
@@ -72,6 +74,7 @@ public abstract class Enemy : MonoBehaviour
         _manager = GetComponentInParent<Manager>();
         _myAudioSource = GetComponent<AudioSource>();
     }
+
 
     private void FixedUpdate()
     {
@@ -123,6 +126,12 @@ public abstract class Enemy : MonoBehaviour
     private void DestroyObject()
     { 
         Destroy(this.gameObject);
+    }
+
+    public void Reveal()
+    {
+        Debug.Log("AAA");
+        _mesh.SetActive(true);
     }
 
 

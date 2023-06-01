@@ -58,6 +58,7 @@ MonoBehaviour:
   _attackDelay: 2
   _isAttacking: 0
   blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
+  _mesh: {fileID: 7513080131914406042}
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
 --- !u!195 &5452547552819656227
 NavMeshAgent:
@@ -254,9 +255,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4020390418855135517, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
       propertyPath: m_Name
       value: Warzombie F Pedroso (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974243983493711947, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
       propertyPath: m_Controller
@@ -275,5 +288,10 @@ PrefabInstance:
 --- !u!4 &2881705457954687378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
+  m_PrefabInstance: {fileID: 2339451394157506169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7513080131914406042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4020390418855135517, guid: a690c5a2576d5d54aa528e20950cd2fd, type: 3}
   m_PrefabInstance: {fileID: 2339451394157506169}
   m_PrefabAsset: {fileID: 0}

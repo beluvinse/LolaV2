@@ -35,7 +35,7 @@ public class FieldOfView : MonoBehaviour
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    seesEnemy = true;
+                    seesEnemy = true; 
                     return Target.GetComponent<Enemy>();
                 }
 
