@@ -2521,6 +2521,10 @@ GameObject:
   - component: {fileID: 8532524549298729440}
   - component: {fileID: 8532524549298729442}
   - component: {fileID: 8532524549298729443}
+  - component: {fileID: 4901226443185812155}
+  - component: {fileID: 9009669487456634031}
+  - component: {fileID: 5299389618896037952}
+  - component: {fileID: 8390256666058954160}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2618,14 +2622,9 @@ MonoBehaviour:
   _zAxisName: zAxis
   _shootAnimation: {fileID: 7400000, guid: f3002af37933db44dac32719f847cffc, type: 2}
   gun: {fileID: 8532524550079467530}
-  _gunSFX: {fileID: 8300000, guid: e0e02ac3737006e46ae00cee0f640587, type: 3}
-  _reloadSFX: {fileID: 8300000, guid: 66f7cea8a805ba341ab3c314abccef33, type: 3}
-  _noAmmoSFX: {fileID: 8300000, guid: ebe8bb5c12a88b74facda84ebb7c49a9, type: 3}
   pHM: {fileID: 0}
   rollCounter: 0
   _rollDelay: 3
-  _currentAmmo: 0
-  _maxAmmo: 0
   pause: {fileID: 3411472743905106018, guid: bc3cfaded39e7b1408b673119f6a6bd2, type: 3}
   _gameIsPaused: 0
   _key: {fileID: 0}
@@ -2725,6 +2724,64 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4901226443185812155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532524549298729444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8b1220d32108e43beab14caa8b06c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _zombie1Mat: {fileID: 2100000, guid: c9ca3c74ddced2040b99bf9d0de46677, type: 2}
+  _zombie2Mat: {fileID: 2100000, guid: 4e34b8417c431fd4badcc20718b32972, type: 2}
+  _zombie3Mat: {fileID: 2100000, guid: 58247b5bff175434faad25bfac4eb579, type: 2}
+  _floorMat: {fileID: 2100000, guid: 7b8ba04d3bfaee948bd163224683e43d, type: 2}
+--- !u!114 &9009669487456634031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532524549298729444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 594341cd321cdb241b9c86712f988511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xAxisName: xAxis
+  _zAxisName: zAxis
+  _shootAnimation: {fileID: 0}
+--- !u!114 &5299389618896037952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532524549298729444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b289fe1b547264aab4548bceae261d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8390256666058954160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532524549298729444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e6a7fca17b9934ba213f3b20ffc636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunSFX: {fileID: 8300000, guid: e0e02ac3737006e46ae00cee0f640587, type: 3}
+  _reloadSFX: {fileID: 8300000, guid: 66f7cea8a805ba341ab3c314abccef33, type: 3}
+  _noAmmoSFX: {fileID: 8300000, guid: ebe8bb5c12a88b74facda84ebb7c49a9, type: 3}
 --- !u!1 &8532524549318702933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,6 +3351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e9e153b181c824fb91a9b9559389d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fov: {fileID: 0}
   _bulletTrail: {fileID: 5968744638619473451, guid: b2f00dc5a9e8f32438ef525be402672d, type: 3}
   _shotDelay: 0.8
   _weaponRange: 15
