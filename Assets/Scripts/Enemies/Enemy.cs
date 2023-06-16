@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
-
+    #region
     public float MaxLife
     {
         get
@@ -18,7 +18,6 @@ public abstract class Enemy : MonoBehaviour
             _maxLife = Mathf.Clamp(value, 10, 200);
         }
     }
-
     public float Damage
     {
         get
@@ -30,6 +29,7 @@ public abstract class Enemy : MonoBehaviour
             _damage = Mathf.Clamp(value, 10, 50);
         }
     }
+       #endregion  
 
     [Header("Values")]
     [SerializeField] protected float _life;
