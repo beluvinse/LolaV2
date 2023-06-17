@@ -47,7 +47,7 @@ Material:
     - _Range: 8
     m_Colors:
     - _FloorColor: {r: 0.14150935, g: 0.12482195, b: 0.12482195, a: 0}
-    - _PlayerPosition: {r: -36.03972, g: 0.8949994, b: -45.917747, a: 0}
+    - _PlayerPosition: {r: -40.677628, g: 0.894999, b: -24.315159, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2596403500881288991
 MonoBehaviour:

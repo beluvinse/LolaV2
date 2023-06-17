@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     {
         foreach (GameObject spawn in _spawns)
         {
-            Enemy enemy = new EnemyBuilder(_allEnemies[Random.Range(0, 3)])
+            Enemy enemy = new EnemyBuilder(_allEnemies[Random.Range(0, 2)])
                             .SetDamage(Random.Range(10, 30))
                             .SetPosition(spawn.transform.position.x, spawn.transform.position.y, spawn.transform.position.z)
                             .SetScale(Vector3.one)
