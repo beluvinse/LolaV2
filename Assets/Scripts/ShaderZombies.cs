@@ -8,6 +8,7 @@ public class ShaderZombies : MonoBehaviour
     [SerializeField] private Material _zombie2Mat;
     [SerializeField] private Material _zombie3Mat;
     [SerializeField] private Material _floorMat;
+    [SerializeField] private Material _zombieBulletMat;
 
     void Update()
     {
@@ -15,5 +16,6 @@ public class ShaderZombies : MonoBehaviour
         _zombie2Mat.SetVector("_PlayerPosition", transform.position);
         _zombie3Mat.SetVector("_PlayerPosition", transform.position);
         _floorMat.SetVector("_PlayerPosition", transform.position);
+        _zombieBulletMat.SetVector("_PlayerPosition", transform.position);
     }
 }

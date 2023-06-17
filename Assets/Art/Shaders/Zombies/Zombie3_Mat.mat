@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_4651b2ddd79244df966d3e99f0b6a641_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 291378d8a60547d4a952fa0060ef5a42, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6b1156b73c2ce224ebc00127387d338d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_672a0e0b1c76485c84df9398287d93a9_Texture_1:
@@ -59,5 +59,5 @@ Material:
     - _QueueOffset: 0
     - _Range: 8
     m_Colors:
-    - _PlayerPosition: {r: -33.731136, g: 0.89499927, b: -69.048935, a: 0}
+    - _PlayerPosition: {r: -40.71295, g: 0.8949996, b: -73.62333, a: 0}
   m_BuildTextureStacks: []

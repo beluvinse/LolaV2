@@ -7,8 +7,21 @@ public class ZombieBullet : MonoBehaviour
     [SerializeField] protected float _speed;
     [SerializeField] protected float _damage;
 
+    [SerializeField] ParticleSystem particle;
+
+    [SerializeField] Transform player;
+
     private void Update()
     {
+        /*if(Vector3.Distance(this.transform.position, player.position) > 8f)
+        {
+            particle.gameObject.SetActive(false);
+
+        }
+        else
+        {
+            particle.gameObject.SetActive(true);
+        }*/
         BulletBehaviour();
     }
 
