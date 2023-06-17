@@ -88,6 +88,7 @@ public class GunController : MonoBehaviour
                 shotCounter = _shotDelay;
                 var enemy = fov.FieldOfViewCheck();
                 if (enemy) { enemy.TakeDamage(1000); }
+
                 /*RaycastHit hit;
                 var trail = Instantiate(
                     _bulletTrail,
