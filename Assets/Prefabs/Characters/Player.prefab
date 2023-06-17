@@ -2972,6 +2972,9 @@ MonoBehaviour:
   _zombie3Mat: {fileID: 2100000, guid: 58247b5bff175434faad25bfac4eb579, type: 2}
   _floorMat: {fileID: 2100000, guid: 7b8ba04d3bfaee948bd163224683e43d, type: 2}
   _zombieBulletMat: {fileID: 2100000, guid: 744e91863159a5d48afc01647952583d, type: 2}
+  _keyMat: {fileID: 2100000, guid: 91fbbb6ad5be5e24d9f5d5fb9d408b96, type: 2}
+  _ammoMat: {fileID: 2100000, guid: 57dae7085c9b8df4096a969cf5a9862d, type: 2}
+  _medKitMat: {fileID: 2100000, guid: 868ff4d5af73b7349aba13b6135d87a9, type: 2}
 --- !u!114 &9009669487456634031
 MonoBehaviour:
   m_ObjectHideFlags: 0
