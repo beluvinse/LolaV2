@@ -14052,7 +14052,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.88631546, b: 0.740566, a: 1}
-  m_Intensity: 0.35
+  m_Intensity: 7.28
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -19503,11 +19503,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8257461415375461874}
   - {fileID: 892087611}
   - {fileID: 1523130685}
   - {fileID: 2117567770}
   - {fileID: 897372959}
+  - {fileID: 8257461415375461874}
   - {fileID: 76358031}
   - {fileID: 1483203934}
   - {fileID: 355894802}
