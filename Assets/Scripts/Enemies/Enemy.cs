@@ -66,7 +66,6 @@ public abstract class Enemy : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _myAnim.SetBool("moving", false);
         _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _mesh.SetActive(false);
     }
 
     private void Start()
@@ -118,7 +117,7 @@ public abstract class Enemy : MonoBehaviour
         _life -= val;
         
         Instantiate(blood, transform.position, transform.rotation, this.transform);
-        if (_life <= 0) DestroyObject();
+        if (_life <= 0) DestroyObject(); Debug.LogError("F");
 
     }
 

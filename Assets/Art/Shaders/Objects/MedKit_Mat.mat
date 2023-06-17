@@ -44,10 +44,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Range: 8
+    - _Range: 15
     m_Colors:
     - _FloorColor: {r: 0.14150935, g: 0.12482195, b: 0.12482195, a: 0}
-    - _PlayerPosition: {r: -40.677628, g: 0.894999, b: -24.315159, a: 0}
+    - _PlayerPosition: {r: -45.28881, g: 0.8949996, b: -49.15624, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2596403500881288991
 MonoBehaviour:

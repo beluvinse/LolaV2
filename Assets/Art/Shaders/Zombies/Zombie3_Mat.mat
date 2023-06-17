@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zombie3_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 459841fc9741e8845812b45a44726a3f, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 7d93b129b54772642a6ff76aae3d039e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_4651b2ddd79244df966d3e99f0b6a641_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 6b1156b73c2ce224ebc00127387d338d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 291378d8a60547d4a952fa0060ef5a42, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_672a0e0b1c76485c84df9398287d93a9_Texture_1:
@@ -57,7 +57,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Range: 8
+    - _Range: 15
     m_Colors:
-    - _PlayerPosition: {r: -40.677628, g: 0.894999, b: -24.315159, a: 0}
+    - _PlayerPosition: {r: -45.28881, g: 0.8949996, b: -49.15624, a: 0}
   m_BuildTextureStacks: []
