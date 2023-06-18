@@ -3097,7 +3097,6 @@ GameObject:
   - component: {fileID: 843009484}
   - component: {fileID: 843009483}
   - component: {fileID: 843009482}
-  - component: {fileID: 843009485}
   - component: {fileID: 843009487}
   - component: {fileID: 843009486}
   m_Layer: 7
@@ -3186,31 +3185,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843009480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &843009485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843009480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d367909f3a302d4882c01206995f61a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _life: 10
-  _maxLife: 0
-  _damage: 0
-  type: 0
-  _player: {fileID: 0}
-  _chaseRadius: 0
-  _attackRadius: 0
-  _attackDelay: 0
-  _isAttacking: 0
-  blood: {fileID: 0}
-  _mesh: {fileID: 0}
-  _takeDamageSFX: {fileID: 0}
-  key: {fileID: 0}
 --- !u!65 &843009486
 BoxCollider:
   m_ObjectHideFlags: 0
