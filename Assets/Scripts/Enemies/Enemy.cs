@@ -59,6 +59,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] GameObject _mesh;
     [SerializeField] private AudioClip _takeDamageSFX;
 
+    public GameObject key;
+
 
     private void Awake()
     {
@@ -123,7 +125,11 @@ public abstract class Enemy : MonoBehaviour
 
 
     private void DestroyObject()
-    { 
+    {
+        if (this.gameObject.CompareTag("Boss"))
+        {
+            key.gameObject.SetActive(true);
+        }
         Destroy(this.gameObject);
     }
 

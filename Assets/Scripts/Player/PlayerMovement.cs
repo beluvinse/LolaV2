@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool _gameIsPaused;
 
     [SerializeField] GameObject _key;
+    public GameObject Key { get { return _key; } }
 
 
 
@@ -204,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
                 var door = hit.collider.GetComponent<Doors>();
 
                 if (door) {
-                    if (!door.loocked)
+                    if (!door.locked)
                     {
                         Debug.Log("abrido");
                         door.OpenDoor();
@@ -215,7 +216,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("needs key");
+                        Debug.LogError("needs key");
                     }
                 }
             }

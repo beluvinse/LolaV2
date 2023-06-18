@@ -18,7 +18,7 @@ public class OpenDoor : MonoBehaviour
 
                 if (door)
                 {
-                    if (!door.loocked)
+                    if (!door.locked)
                     {
                         Debug.Log("abrido");
                         door.OpenDoor();

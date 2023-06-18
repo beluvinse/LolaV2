@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class BossActivation : MonoBehaviour
 {
+    [SerializeField] Doors Door;
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("xxx");
 
         var x = other.GetComponent<ShaderZombies>();
         if (x)
         {
-            Debug.Log("omaiga");
+            Debug.LogError("Boss Zombie Inbound");
             x.SetShaderRange(15f);
+            Door.gameObject.SetActive(true);
+            Door.LockDoor();
         }
+        
+        
     }
 }
