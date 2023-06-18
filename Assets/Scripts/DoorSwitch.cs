@@ -14,7 +14,7 @@ public class DoorSwitch : MonoBehaviour
         onOff = true;
     }
 
-    private void Update()
+    /*private void Update()
     {
         if(onOff == true)
         {
@@ -23,8 +23,7 @@ public class DoorSwitch : MonoBehaviour
         else
         {
             door.UnlockDoor();
-        }
-    }
+        }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,10 +31,20 @@ public class DoorSwitch : MonoBehaviour
         if (player)
         {
             Debug.LogError("Press E to interact;");
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        var player = other.GetComponent<PlayerMovement>();
+        if (player)
+        {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                onOff = !onOff;
+                onOff = false;
+                door.UnlockDoor();
             }
         }
+        
     }
 }

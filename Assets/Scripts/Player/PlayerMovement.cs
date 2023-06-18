@@ -214,10 +214,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         door.UnlockDoor();
                     }
-                    else
-                    {
-                        Debug.LogError("needs key");
-                    }
+                   
                 }
             }
         }

@@ -839,6 +839,10 @@ PrefabInstance:
       value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4964013445995978077, guid: b16fe185c604358458253f9c528a04c7, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4964013445995978077, guid: b16fe185c604358458253f9c528a04c7, type: 3}
       propertyPath: _locked
       value: 1
       objectReference: {fileID: 0}

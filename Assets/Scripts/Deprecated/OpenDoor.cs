@@ -18,18 +18,15 @@ public class OpenDoor : MonoBehaviour
 
                 if (door)
                 {
+                    door.OpenDoor();
                     if (!door.locked)
                     {
                         Debug.Log("abrido");
-                        door.OpenDoor();
+                        
                     }
                     else if (key)
                     {
                         door.UnlockDoor();
-                    }
-                    else
-                    {
-                        Debug.Log("needs key");
                     }
                 }
             }

@@ -57,7 +57,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Range: 15
+    - _Range: 8
     m_Colors:
-    - _PlayerPosition: {r: -41.32052, g: 0.89499927, b: -65.09863, a: 0}
+    - _PlayerPosition: {r: 5.344106, g: 0.89499927, b: -66.62822, a: 0}
   m_BuildTextureStacks: []
