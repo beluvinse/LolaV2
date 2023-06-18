@@ -80,13 +80,14 @@ public class GunController : MonoBehaviour
         //Debug.DrawLine(this.transform.position, playerMov.getLookAt(), Color.green);
         shootingRay = new Vector3(playerMov.getLookAt().x, this.transform.position.y, playerMov.getLookAt().z);
         Debug.DrawLine(this.transform.position, shootingRay, Color.red);
+        var enemy = fov.FieldOfViewCheck();
         if (isFiring)
         {
             shotCounter -= Time.deltaTime;
             if (shotCounter <= 0)
             {
                 shotCounter = _shotDelay;
-                var enemy = fov.FieldOfViewCheck();
+                
                 if (enemy) { enemy.TakeDamage(1000); }
 
                 /*RaycastHit hit;

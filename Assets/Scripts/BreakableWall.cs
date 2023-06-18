@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class BreakableWall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        var x = other.GetComponent<PlayerMovement>();
+        if (x)
+        {
+            if (Input.GetMouseButton(0)){
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }

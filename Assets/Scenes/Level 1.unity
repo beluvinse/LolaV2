@@ -1588,6 +1588,10 @@ PrefabInstance:
       value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8532524550079467530, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
+      propertyPath: _weaponRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8532524550079467530, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
       propertyPath: _layerMask.m_Bits
       value: 8
       objectReference: {fileID: 0}
@@ -3093,7 +3097,10 @@ GameObject:
   - component: {fileID: 843009484}
   - component: {fileID: 843009483}
   - component: {fileID: 843009482}
-  m_Layer: 8
+  - component: {fileID: 843009485}
+  - component: {fileID: 843009487}
+  - component: {fileID: 843009486}
+  m_Layer: 7
   m_Name: Breakable Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3179,6 +3186,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843009480}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &843009485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843009480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d367909f3a302d4882c01206995f61a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _life: 10
+  _maxLife: 0
+  _damage: 0
+  type: 0
+  _player: {fileID: 0}
+  _chaseRadius: 0
+  _attackRadius: 0
+  _attackDelay: 0
+  _isAttacking: 0
+  blood: {fileID: 0}
+  _mesh: {fileID: 0}
+  _takeDamageSFX: {fileID: 0}
+  key: {fileID: 0}
+--- !u!65 &843009486
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843009480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.9, y: 1, z: 1.49}
+  m_Center: {x: 2.82, y: 0, z: -0.00000011920929}
+--- !u!114 &843009487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843009480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628a14f355fde3949a1ddf8b0cdeadaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &846171774
 GameObject:
   m_ObjectHideFlags: 0
@@ -3715,8 +3772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43b93b076270a242b39e0d82d4a533f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
-  angle: 72.82
+  range: 20
+  angle: 90
   seesEnemy: 0
 --- !u!1 &1036939872
 GameObject:
@@ -7570,7 +7627,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-128490
+  m_Name: pb_Mesh-849534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7779,7 +7836,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2131988741
 Transform:
