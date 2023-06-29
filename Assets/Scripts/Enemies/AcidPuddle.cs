@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AcidPuddle : MonoBehaviour
 {
-    [SerializeField] private float _damage = 10f;
     [SerializeField] private float _time = 10f;
 
     private float contador;
@@ -69,7 +68,7 @@ public class AcidPuddle : MonoBehaviour
 
     IEnumerator Acid()
     {
-        _player.TakeDamage(_damage);
+        _player.TakeDamage(FlyweightPointer.Boss.damage);
         yield return new WaitForSeconds(1);
     }
 

@@ -2150,7 +2150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 120
-  _maxLife: 120
   _damage: 15
   type: 2
   _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
@@ -2161,6 +2160,7 @@ MonoBehaviour:
   blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
   _mesh: {fileID: 269721264921034510}
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
+  key: {fileID: 0}
   bullet: {fileID: 4338005334111246618, guid: 604b6764991bbc04baa296706bb249db, type: 3}
   pointToShoot: {fileID: 7647429111861617698}
   attackAnim: {fileID: 0}
@@ -2196,7 +2196,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 4
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

@@ -6,34 +6,9 @@ using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    #region
-    public float MaxLife
-    {
-        get
-        {
-            return _maxLife;
-        }
-        set
-        {
-            _maxLife = Mathf.Clamp(value, 10, 200);
-        }
-    }
-    public float Damage
-    {
-        get
-        {
-            return _damage;
-        }
-        set
-        {
-            _damage = Mathf.Clamp(value, 10, 50);
-        }
-    }
-       #endregion  
 
     [Header("Values")]
     [SerializeField] protected float _life;
-    [SerializeField] protected float _maxLife;
     [SerializeField] protected float _damage;
     [SerializeField] protected TypeOfEnemy type;
 
@@ -68,7 +43,24 @@ public abstract class Enemy : MonoBehaviour
         _myAnim.SetBool("moving", false);
         _player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        
+        switch (type)
+        {
+            case TypeOfEnemy.Melee:
+                {
+                    SetCommonZombie();
+                    break;
+                }
+            case TypeOfEnemy.Ranged:
+                {
+                    SetRangedZombie();
+                    break;
+                }
+            case TypeOfEnemy.Boss:
+                {
+                    SetBossZombie();
+                    break;
+                }
+        }
     }
 
     private void Start()
@@ -125,23 +117,32 @@ public abstract class Enemy : MonoBehaviour
 
     private void DestroyObject()
     {
-        if (this.gameObject.CompareTag("Boss"))
+        if (type == TypeOfEnemy.Boss)
         {
             key.gameObject.SetActive(true);
         }
         Destroy(this.gameObject);
     }
 
+
+    //Setear valores intrinsicos
     private void SetCommonZombie()
     {
         _life = FlyweightPointer.CommonZombie.maxLife;
     }
-
+    private void SetRangedZombie()
+    {
+        _life = FlyweightPointer.RangeZombie.maxLife;
+    }
+    private void SetBossZombie()
+    {
+        _life = FlyweightPointer.Boss.maxLife;
+    }
 }
 
 public enum TypeOfEnemy{
     Melee,
     Ranged,
-    RangedAcid
+    Boss
 
 }

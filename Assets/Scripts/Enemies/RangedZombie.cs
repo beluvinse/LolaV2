@@ -12,7 +12,7 @@ public class RangedZombie : Enemy
 
     private void FixedUpdate()
     {
-        if(type == TypeOfEnemy.RangedAcid)
+        if(type == TypeOfEnemy.Boss)
             ChasePlayer(FlyweightPointer.Boss.chaseRadius, FlyweightPointer.Boss.attackRadius);
         else if(type == TypeOfEnemy.Ranged)
             ChasePlayer(FlyweightPointer.RangeZombie.chaseRadius, FlyweightPointer.RangeZombie.attackRadius);
@@ -27,7 +27,7 @@ public class RangedZombie : Enemy
             attackCounter -= Time.fixedDeltaTime;
             if (attackCounter <= 0)
             {
-                if(type == TypeOfEnemy.RangedAcid)
+                if(type == TypeOfEnemy.Boss)
                 {
                     var bala = AcidBulletFactory.Instance.GetObject();
                     bala.transform.position = pointToShoot.position;

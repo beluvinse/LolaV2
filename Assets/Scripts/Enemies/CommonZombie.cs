@@ -14,7 +14,7 @@ public class CommonZombie : Enemy
             if(attackCounter <= 0)
             {
                 attackCounter = _attackDelay;
-                _player.GetComponent<HealthManager>().TakeDamage(_damage);
+                _player.GetComponent<HealthManager>().TakeDamage(FlyweightPointer.CommonZombie.damage);
                 Debug.Log("te ataco");
             }
         }

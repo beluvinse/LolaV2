@@ -5,7 +5,6 @@ using UnityEngine;
 public class ZombieBullet : MonoBehaviour
 {
     [SerializeField] protected float _speed;
-    [SerializeField] protected float _damage;
 
     [SerializeField] ParticleSystem particle;
 
@@ -37,7 +36,7 @@ public class ZombieBullet : MonoBehaviour
         var entity = other.GetComponent<HealthManager>();
         if (entity)
         {
-            entity.GetComponent<HealthManager>().TakeDamage(_damage);
+            entity.GetComponent<HealthManager>().TakeDamage(FlyweightPointer.RangeZombie.damage);
             Debug.Log("mepegaste jugador ");
             ZombieBulletFactory.Instance.ReturnBullet(this);
         }
