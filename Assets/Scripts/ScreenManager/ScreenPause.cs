@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ScreenPause : MonoBehaviour, IScreen
 {
-
     Button[] _buttons;
 
     private void Awake()
@@ -25,12 +24,15 @@ public class ScreenPause : MonoBehaviour, IScreen
     public void BTN_Back()
     {
         ScreenManager.Instance.Pop();
+        Time.timeScale = 1f;
+        ScreenManager.Instance.isPaused = false;
     }
-    
+
     public void BTN_Restart()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        ScreenManager.Instance.isPaused = false;
     }
 
     public void BTN_ExitGame()

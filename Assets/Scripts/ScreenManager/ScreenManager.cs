@@ -8,6 +8,8 @@ public class ScreenManager : MonoBehaviour
 
     static public ScreenManager Instance { get; private set; }
 
+    public bool isPaused = false;
+
     void Awake()
     {
         Instance = this;
@@ -48,6 +50,4 @@ public class ScreenManager : MonoBehaviour
             _stack.Peek().Activate();
         }
     }
-
-
 }

@@ -18,7 +18,6 @@ public class ScreenOptions : MonoBehaviour, IScreen
     public void BTN_Back()
     {
         ScreenManager.Instance.Pop();
-        Time.timeScale = 1f;
         ScreenManager.Instance.Push("Canvas_Pause");
     }
 

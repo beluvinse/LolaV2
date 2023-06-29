@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Config : MonoBehaviour
 {
-    bool gameIsPaused = false;
-
     [SerializeField] Transform _mainGame;
 
     void Start()
@@ -14,26 +12,12 @@ public class Config : MonoBehaviour
     }
 
 
+
     void Update()
     {
-       /*if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P) && !ScreenManager.Instance.isPaused)
         {
-            if (!gameIsPaused)
-            {
-                var screenPause = Instantiate(Resources.Load<ScreenPause>("Canvas_Pause"));
-                ScreenManager.Instance.Push(screenPause);
-                gameIsPaused = true;
-            }
-            else
-            {
-                ScreenManager.Instance.Pop();
-                gameIsPaused = false;
-            }
-
-        }*/
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
+            ScreenManager.Instance.isPaused = true;
             var screenPause = Instantiate(Resources.Load<ScreenPause>("Canvas_Pause"));
             ScreenManager.Instance.Push(screenPause);
             Time.timeScale = 0f;
@@ -41,9 +25,9 @@ public class Config : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
             ScreenManager.Instance.Pop();
-            Time.timeScale = 0f;
+            Time.timeScale = 1f;
+            ScreenManager.Instance.isPaused = false;
         }
-
-
+    
     }
 }
