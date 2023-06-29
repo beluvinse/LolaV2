@@ -47,10 +47,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _MaskDiffuse: 0.25
-    - _MaskOpacity: 1
-    - _MaskSize: 1
+    - _MaskDiffuse: 1
+    - _MaskOpacity: 0.5
+    - _MaskSize: 0
+    - _QueueControl: 1
+    - _QueueOffset: 0
     m_Colors:
-    - _PlayerPosition: {r: 0.5415628, g: 0.5206208, b: 4.9912453, a: 0}
-    - _WallColor: {r: 1, g: 1, b: 1, a: 0}
+    - _PlayerPosition: {r: 0.5, g: 0.4095779, b: 24.171122, a: 0}
+    - _WallColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

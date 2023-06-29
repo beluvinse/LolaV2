@@ -3409,6 +3409,7 @@ GameObject:
   - component: {fileID: 8206443231883273057}
   - component: {fileID: 8532524548317890158}
   - component: {fileID: 1093311179}
+  - component: {fileID: 7769529145668172224}
   m_Layer: 0
   m_Name: Lola
   m_TagString: Untagged
@@ -3475,6 +3476,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _doorRange: 3
   key: {fileID: 0}
+--- !u!114 &7769529145668172224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838582615377181147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089c2ad1fd4a7e349ba965445071c5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _viewMask:
+    serializedVersion: 2
+    m_Bits: 256
+  _maskMaterial: {fileID: 2100000, guid: 8068dfb8c836fc74aad240e71084d4b0, type: 2}
+  _playerPosName: _PlayerPosition
+  _sizeName: _MaskSize
 --- !u!1 &8982423072105653322
 GameObject:
   m_ObjectHideFlags: 0

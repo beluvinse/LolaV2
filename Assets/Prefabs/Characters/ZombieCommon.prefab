@@ -60,6 +60,7 @@ MonoBehaviour:
   blood: {fileID: 6614007289580347049, guid: b5cc315ff7bcdec4098ae081a489b9df, type: 3}
   _mesh: {fileID: 7513080131914406042}
   _takeDamageSFX: {fileID: 8300000, guid: 241b39b3d879be043a57ffcd8dfbfd36, type: 3}
+  key: {fileID: 0}
 --- !u!195 &5452547552819656227
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5145994576949569437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 4

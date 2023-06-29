@@ -1,5 +1,5 @@
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.GraphData",
     "m_ObjectId": "0f7d2708b3e248a18911b47c9a74af5c",
     "m_Properties": [
@@ -20,6 +20,12 @@
         }
     ],
     "m_Keywords": [],
+    "m_Dropdowns": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "c057b14913c344d397c53827a7e7f559"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "aa58f2a8f36a4e1785ed26df3a3dd06c"
@@ -631,10 +637,11 @@
         "serializedMesh": {
             "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
             "m_Guid": ""
-        }
+        },
+        "preventRotation": false
     },
     "m_Path": "Shader Graphs",
-    "m_ConcretePrecision": 1,
+    "m_GraphPrecision": 2,
     "m_PreviewMode": 2,
     "m_OutputNode": {
         "m_Id": ""
@@ -654,9 +661,13 @@
         "m_GuidSerialized": "49c6465c-70f0-4afa-b485-80b2375217ea"
     },
     "m_Name": "Mask Diffuse",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_022edd24e923413a8647466af0fbcd3e",
     "m_OverrideReferenceName": "_MaskDiffuse",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -742,7 +753,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Smoothness",
     "m_StageCapability": 2,
-    "m_Value": 0.5,
+    "m_Value": 0.0,
     "m_DefaultValue": 0.5,
     "m_Labels": []
 }
@@ -2188,9 +2199,13 @@
         "m_GuidSerialized": "41f012cc-d7c8-43e3-bbd4-d21ce9a021cd"
     },
     "m_Name": "Mask Opacity",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_6f20d4c20c924f239717f89dd75ecdb1",
     "m_OverrideReferenceName": "_MaskOpacity",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2559,9 +2574,13 @@
         "m_GuidSerialized": "22ed8c24-42aa-4898-b7a0-9280b0a8b576"
     },
     "m_Name": "Player Position",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector3_9bfbf83dd4264f2ab531d5654b89b7d0",
     "m_OverrideReferenceName": "_PlayerPosition",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2619,17 +2638,23 @@
 }
 
 {
-    "m_SGVersion": 0,
+    "m_SGVersion": 1,
     "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalTarget",
     "m_ObjectId": "a072a076744a48248f5a09ee6b451cf4",
     "m_ActiveSubTarget": {
         "m_Id": "e50211cc79d3459ca6c62051130abb5c"
     },
+    "m_AllowMaterialOverride": false,
     "m_SurfaceType": 1,
+    "m_ZTestMode": 4,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_TwoSided": false,
+    "m_RenderFace": 2,
     "m_AlphaClip": false,
-    "m_CustomEditorGUI": ""
+    "m_CastShadows": true,
+    "m_ReceiveShadows": true,
+    "m_CustomEditorGUI": "",
+    "m_SupportVFX": false
 }
 
 {
@@ -2675,9 +2700,13 @@
         "m_GuidSerialized": "015c3896-ccf2-4b0c-aa82-2a48d2712f09"
     },
     "m_Name": "Wall Color",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Color_a4d6a936841a4729b16917ff8f27e1fe",
     "m_OverrideReferenceName": "_WallColor",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
@@ -2688,6 +2717,7 @@
         "b": 1.0,
         "a": 0.0
     },
+    "isMainColor": false,
     "m_ColorMode": 0
 }
 
@@ -3179,6 +3209,30 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "c057b14913c344d397c53827a7e7f559",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "a4d6a936841a4729b16917ff8f27e1fe"
+        },
+        {
+            "m_Id": "9bfbf83dd4264f2ab531d5654b89b7d0"
+        },
+        {
+            "m_Id": "f12f9ab669824363b664c929a97b942a"
+        },
+        {
+            "m_Id": "6f20d4c20c924f239717f89dd75ecdb1"
+        },
+        {
+            "m_Id": "022edd24e923413a8647466af0fbcd3e"
+        }
+    ]
 }
 
 {
@@ -3912,9 +3966,13 @@
         "m_GuidSerialized": "599351a4-673b-4c89-9c94-2654b3f6eda9"
     },
     "m_Name": "Mask Size",
+    "m_DefaultRefNameVersion": 0,
+    "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector1_f12f9ab669824363b664c929a97b942a",
     "m_OverrideReferenceName": "_MaskSize",
     "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
