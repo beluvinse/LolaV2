@@ -10,6 +10,15 @@ public class RangedZombie : Enemy
 
     public AnimationClip attackAnim;
 
+    private void FixedUpdate()
+    {
+        if(type == TypeOfEnemy.RangedAcid)
+            ChasePlayer(FlyweightPointer.Boss.chaseRadius, FlyweightPointer.Boss.attackRadius);
+        else if(type == TypeOfEnemy.Ranged)
+            ChasePlayer(FlyweightPointer.RangeZombie.chaseRadius, FlyweightPointer.RangeZombie.attackRadius);
+
+    }
+
     public override void Attack()
     {
         //attackCounter = attackAnim(length);

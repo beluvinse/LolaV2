@@ -77,18 +77,18 @@ public abstract class Enemy : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    protected void ChasePlayer(float chaseRadius, float attackRadius)
     {
         float distance = Vector3.Distance(_player.position, transform.position);
         FollowPlayer();
-        if (distance <= _chaseRadius && distance > _attackRadius)
+        if (distance <= chaseRadius && distance > attackRadius)
         {
             _myAnim.SetBool("moving", true);
             _navMeshAgent.SetDestination(_player.position);
             transform.LookAt(_player);
             _isAttacking = false;
         }
-        else if (distance <= _attackRadius)
+        else if (distance <= attackRadius)
         {
             _isAttacking = true;
             _myAnim.SetBool("moving", false);
@@ -98,7 +98,6 @@ public abstract class Enemy : MonoBehaviour
         }
         else
             _myAnim.SetBool("moving", false);
-
     }
 
     private void FollowPlayer()
