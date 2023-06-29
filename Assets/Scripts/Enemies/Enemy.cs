@@ -49,7 +49,6 @@ public abstract class Enemy : MonoBehaviour
 
     private Animator _myAnim;
 
-    private Manager _manager;
     private AudioSource _myAudioSource;
 
     protected NavMeshAgent _navMeshAgent;
@@ -68,11 +67,12 @@ public abstract class Enemy : MonoBehaviour
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _myAnim.SetBool("moving", false);
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        
     }
 
     private void Start()
     {
-        _manager = GetComponentInParent<Manager>();
         _myAudioSource = GetComponent<AudioSource>();
     }
 
@@ -133,12 +133,10 @@ public abstract class Enemy : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public void Reveal()
+    private void SetCommonZombie()
     {
-        Debug.Log("AAA");
-        _mesh.SetActive(true);
+        _life = FlyweightPointer.CommonZombie.maxLife;
     }
-
 
 }
 

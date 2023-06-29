@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 public class RangedZombie : Enemy
 {
     public GameObject bullet;
