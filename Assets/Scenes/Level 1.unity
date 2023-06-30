@@ -1032,7 +1032,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &303670971
 MonoBehaviour:
@@ -1702,7 +1702,20 @@ PrefabInstance:
       propertyPath: _obstructionMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8760363917221618716, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760363917221618716, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760363917221618716, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1093311179, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
 --- !u!1 &474922026
 GameObject:
@@ -3005,7 +3018,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -3562,7 +3575,7 @@ Transform:
   m_Children:
   - {fileID: 193135255}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &956074529
 GameObject:
@@ -4129,25 +4142,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &1093311176 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8838582615377181147, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
-  m_PrefabInstance: {fileID: 462426240}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1093311179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093311176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 214a25f771aecc141b006ed0b54d5525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _doorRange: 3
-  key: {fileID: 0}
 --- !u!4 &1093311180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8206443231883273057, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
@@ -8016,7 +8010,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-18184
+  m_Name: pb_Mesh-1708
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

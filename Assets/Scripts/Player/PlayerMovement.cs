@@ -10,11 +10,10 @@ public class PlayerMovement : MonoBehaviour
     float startSpeed;
     public float groundDrag;
 
-    [Header("Grounde Check")]
+    [Header("Ground Check")]
     [SerializeField] private float _playerHeight;
     [SerializeField] private bool _grounded;
     public LayerMask ground;
-
 
     public Transform orientation;
 
@@ -32,8 +31,6 @@ public class PlayerMovement : MonoBehaviour
 
     public GunController gun;
 
-    
-
     public HealthManager pHM;
     bool val = true;
     bool isRolling = false;
@@ -47,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int _maxAmmo;
     private float _shotDelay;*/
 
-    public Pausa pause;
     [SerializeField] private bool _gameIsPaused;
 
     [SerializeField] GameObject _key;
@@ -94,16 +90,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        val = pHM.getDmg();
-
-
         _grounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, ground);
         if (_grounded)
             myRb.drag = groundDrag;
         else
             myRb.drag = 0;
-
-       
 
         if (!_gameIsPaused) 
         { 
@@ -122,56 +113,26 @@ public class PlayerMovement : MonoBehaviour
             OpenDoor();
         }
 
-        _gameIsPaused = pause.getPausa();
-        
-
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        #region
         /*if(other.tag == "Ammo")
         {
             var ammoBox = other.GetComponentInParent<Reload>();
             ammoBox.ActiveUI();
 
             isReloading = true;
-
         }*/
-        if(other.tag == "Key")
+        #endregion
+
+        if (other.tag == "Key")
         {
             _key = other.gameObject;
             other.gameObject.SetActive(false);
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        if(other.tag == "Ammo")
-        {
-
-            var ammoBox = other.GetComponentInParent<Reload>();
-            if (ammoBox.GetFill() >= 1)
-            {
-                gun.setAmmo(_maxAmmo);
-                OnReload();
-                isReloading = false;
-                ammoBox.DeactiveUI();
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Ammo")
-        {
-            other.GetComponentInParent<Reload>().DeactiveUI();
-            isReloading = false;
-        }
-
-    }*/
-
-
 
     private void FixedUpdate()
     {
@@ -301,6 +262,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator crOnRoll()
     {
+        val = pHM.getDmg();
         _moveSpeed = 0;
         _playerAnim.Trigger("onRoll");
         isRolling = true;
@@ -311,6 +273,39 @@ public class PlayerMovement : MonoBehaviour
         pHM.setDmg(val);
         _moveSpeed = startSpeed;
     }
+
+
+    #region para implementar despues
+
+
+    /*private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Ammo")
+        {
+
+            var ammoBox = other.GetComponentInParent<Reload>();
+            if (ammoBox.GetFill() >= 1)
+            {
+                gun.setAmmo(_maxAmmo);
+                OnReload();
+                isReloading = false;
+                ammoBox.DeactiveUI();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Ammo")
+        {
+            other.GetComponentInParent<Reload>().DeactiveUI();
+            isReloading = false;
+        }
+
+    }*/
+
+    #endregion
+
 }
 
 

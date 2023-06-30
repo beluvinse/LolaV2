@@ -16,15 +16,5 @@ public class CameraController : MonoBehaviour
         transform.position = new Vector3(Mathf.Clamp(target.position.x, minPos.x, maxPos.x), 22f, Mathf.Clamp(target.position.z -12f, minPos.z, maxPos.z));
     }
 
-    #region "Deprecated"
-    private void Move(float xAxis, float zAxis)
-    {
-        //var dir = (transform.right * xAxis + transform.forward * zAxis).normalized;
-         moveInput = new Vector3(xAxis, 0f, zAxis).normalized;
-        //_myRB.MovePosition(transform.position + dir * _movSpeed * Time.fixedDeltaTime);
-        transform.position += moveInput * Time.fixedDeltaTime * 15f;
 
-    }
-    #endregion
-   
 }

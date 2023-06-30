@@ -9,7 +9,6 @@ public class UIManager : MonoBehaviour
     public Image myBar;
     public Image myBar2;
     public GameObject player;
-    public Manager manager;
     public GunController gun;
     public Text wavesInfo;
     public Text bullets;
@@ -42,8 +41,6 @@ public class UIManager : MonoBehaviour
         _roll = player.GetComponent<PlayerMovement>().getRollCounter();
         myBar2.fillAmount = _roll / _maxRoll;
 
-        _currentWave = manager.getCurrentWave();
-        _waves = manager.getWaves();
         wavesInfo.text = "Ola: " + _currentWave + "/" + _waves;
 
         _currentBullets = gun.getAmmo();
