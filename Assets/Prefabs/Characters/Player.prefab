@@ -2856,7 +2856,6 @@ MonoBehaviour:
   pHM: {fileID: 0}
   rollCounter: 0
   _rollDelay: 3
-  pause: {fileID: 3411472743905106018, guid: bc3cfaded39e7b1408b673119f6a6bd2, type: 3}
   _gameIsPaused: 0
   _key: {fileID: 0}
 --- !u!82 &8532524549298729443
@@ -2975,6 +2974,11 @@ MonoBehaviour:
   _keyMat: {fileID: 2100000, guid: 91fbbb6ad5be5e24d9f5d5fb9d408b96, type: 2}
   _ammoMat: {fileID: 2100000, guid: 57dae7085c9b8df4096a969cf5a9862d, type: 2}
   _medKitMat: {fileID: 2100000, guid: 868ff4d5af73b7349aba13b6135d87a9, type: 2}
+  _Lolo1: {fileID: 2100000, guid: 0ea7f01d8b93b6c41af521b59b803c8f, type: 2}
+  _Lolo2: {fileID: 2100000, guid: cb8a5b9c206e3ac4c99bc89f94b165ea, type: 2}
+  _Lolo3: {fileID: 2100000, guid: a695ea34347829646a74bb355f4d3f07, type: 2}
+  _Lolo4: {fileID: 2100000, guid: 444e1adf2f6d6454baa415ee0c086b69, type: 2}
+  _Lolo5: {fileID: 2100000, guid: a5024365a1b3df841988f7213cc67852, type: 2}
 --- !u!114 &9009669487456634031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3408,7 +3412,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8206443231883273057}
   - component: {fileID: 8532524548317890158}
-  - component: {fileID: 1093311179}
   - component: {fileID: 7769529145668172224}
   m_Layer: 0
   m_Name: Lola
@@ -3462,20 +3465,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1093311179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8838582615377181147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 214a25f771aecc141b006ed0b54d5525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _doorRange: 3
-  key: {fileID: 0}
 --- !u!114 &7769529145668172224
 MonoBehaviour:
   m_ObjectHideFlags: 0

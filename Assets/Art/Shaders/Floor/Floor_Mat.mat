@@ -24,6 +24,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0241da66e78d23c47b6fdade4f90f1fd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_49bc9edaf6ce45608b9eaae992da3293_Texture_1:
+        m_Texture: {fileID: 2800000, guid: c09cb8f7acfb1104d99126c1d3fe50dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_672a0e0b1c76485c84df9398287d93a9_Texture_1:
         m_Texture: {fileID: 2800000, guid: c09cb8f7acfb1104d99126c1d3fe50dc, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -47,7 +51,8 @@ Material:
     - _Range: 8
     m_Colors:
     - _FloorColor: {r: 0.14150935, g: 0.12482195, b: 0.12482195, a: 0}
-    - _PlayerPosition: {r: -2.6178095, g: 0.89499927, b: 11.230842, a: 0}
+    - _LoloPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _PlayerPosition: {r: -5.2995267, g: 0.89499915, b: 13.892438, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4261866529749648414
 MonoBehaviour:

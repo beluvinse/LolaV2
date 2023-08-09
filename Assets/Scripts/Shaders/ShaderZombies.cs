@@ -12,6 +12,11 @@ public class ShaderZombies : MonoBehaviour
     [SerializeField] private Material _keyMat;
     [SerializeField] private Material _ammoMat;
     [SerializeField] private Material _medKitMat;
+    [SerializeField] private Material _Lolo1;
+    [SerializeField] private Material _Lolo2;
+    [SerializeField] private Material _Lolo3;
+    [SerializeField] private Material _Lolo4;
+    [SerializeField] private Material _Lolo5;
 
     private void Start()
     {
@@ -28,6 +33,11 @@ public class ShaderZombies : MonoBehaviour
         _keyMat.SetVector("_PlayerPosition", transform.position);
         _ammoMat.SetVector("_PlayerPosition", transform.position);
         _medKitMat.SetVector("_PlayerPosition", transform.position);
+        _Lolo1.SetVector("_PlayerPosition", transform.position);
+        _Lolo2.SetVector("_PlayerPosition", transform.position);
+        _Lolo3.SetVector("_PlayerPosition", transform.position);
+        _Lolo4.SetVector("_PlayerPosition", transform.position);
+        _Lolo5.SetVector("_PlayerPosition", transform.position);
     }
 
 
@@ -42,5 +52,10 @@ public class ShaderZombies : MonoBehaviour
         _keyMat.SetFloat("_Range", range);
         _ammoMat.SetFloat("_Range", range);
         _medKitMat.SetFloat("_Range", range);
+        _Lolo1.SetFloat("_Range", range);
+        _Lolo2.SetFloat("_Range", range);
+        _Lolo3.SetFloat("_Range", range);
+        _Lolo4.SetFloat("_Range", range);
+        _Lolo5.SetFloat("_Range", range);
     }
 }
