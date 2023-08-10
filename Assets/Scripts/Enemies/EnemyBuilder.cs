@@ -9,6 +9,10 @@ public class EnemyBuilder
 
     Vector3 _selectedPos;
 
+    bool _level4;
+
+    float _chaseRadius;
+
 
     public EnemyBuilder(Enemy e)
     {
@@ -27,6 +31,18 @@ public class EnemyBuilder
         _selectedPos = new Vector3(x, y, z);
         return this;
     }
+
+    public EnemyBuilder SetLevel4(bool val)
+    {
+        _level4 = val;
+        return this;
+    }
+
+    public EnemyBuilder SetChaseRadius(float rad)
+    {
+        _chaseRadius = rad;
+        return this;
+    }
     
 
     public Enemy Done()
@@ -34,6 +50,8 @@ public class EnemyBuilder
         Enemy enemyCreated = GameObject.Instantiate(_enemy);
 
         enemyCreated.transform.position = _selectedPos;
+        enemyCreated.SetLevel4 = _level4;
+        enemyCreated.SetChaseRadius = _chaseRadius;
 
         enemyCreated.GetComponent<NavMeshAgent>().enabled = true;
         return enemyCreated;

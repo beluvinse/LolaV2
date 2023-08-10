@@ -22,17 +22,11 @@ public class Idle : CurrentState
 
     public override void Update()
     {
-        if (!_lolo.CheckHP())
-        {
+        
             if (_lolo.CheckDistance())
             {
                 fsm.ChangeState(LoloStates.FollowLola);
             }
-        }
-        else
-        {
-            fsm.ChangeState(LoloStates.Runaway);
-        }
             
     }
 

@@ -19,6 +19,9 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float _attackRadius;
     [SerializeField] protected float _attackDelay;
     [SerializeField] protected bool _isAttacking;
+    [SerializeField] protected bool _level4;
+    public bool SetLevel4 { set { _level4 = value; } }
+    public float SetChaseRadius { set { _chaseRadius = value; } }
 
 
 
@@ -41,6 +44,7 @@ public abstract class Enemy : MonoBehaviour
         _myAnim = GetComponentInChildren<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _myAnim.SetBool("moving", false);
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
 
         switch (type)
         {
@@ -65,6 +69,11 @@ public abstract class Enemy : MonoBehaviour
     private void Start()
     {
         _myAudioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        if (_level4) _player = GameObject.FindGameObjectWithTag("Lolo").transform;
     }
 
 

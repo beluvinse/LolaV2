@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 1129948943614238254}
   - component: {fileID: 1234631511}
   - component: {fileID: 1234631512}
+  - component: {fileID: 4758125121956039306}
   m_Layer: 0
   m_Name: Lolo
   m_TagString: Lolo
@@ -241,14 +242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e96872a64406c40beb5409a04196cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _life: 100
-  _HPthreshold: 0
+  _HPthreshold: 50
   _separationRadius: 5
-  _player: {fileID: 0}
+  _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
   _followRadius: 8
   myAnim: {fileID: 0}
-  blood: {fileID: 0}
-  _takeDamageSFX: {fileID: 8300000, guid: 8482e07518d88e24cb9f9daeef7683f7, type: 3}
 --- !u!195 &1234631512
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -259,7 +257,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 15
+  m_Speed: 5
   m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 100
@@ -271,6 +269,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4758125121956039306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352884130759050390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814db32da41562945aa3684a5f6be154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _health: 0
+  _takeDamageSFX: {fileID: 8300000, guid: 8482e07518d88e24cb9f9daeef7683f7, type: 3}
+  hurtParticle: {fileID: 6498221084272267130, guid: 737bbf525509da240a0f306d58c07159, type: 3}
+  _canTakeDamage: 0
 --- !u!1 &453373822938190002
 GameObject:
   m_ObjectHideFlags: 0

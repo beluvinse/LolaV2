@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(HealthManager))]
 public class Lolo : MonoBehaviour
 {
     [Header("Values")]
-    [SerializeField] protected float _life;
     [SerializeField] protected float _HPthreshold;
     [SerializeField] float _separationRadius;
 
@@ -17,24 +17,22 @@ public class Lolo : MonoBehaviour
     [SerializeField] protected float _followRadius;
 
     public Animator myAnim;
-    private AudioSource _myAudioSource;
 
 
-    [SerializeField] GameObject blood;
-    [SerializeField] private AudioClip _takeDamageSFX;
 
     private NavMeshAgent _navMeshAgent;
+    private HealthManager _healthManager;
     LoloFSM _fsm;
 
     private void Awake()
     {
         myAnim = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _healthManager = GetComponent<HealthManager>();
     }
 
     private void Start()
     {
-        _myAudioSource = GetComponent<AudioSource>();
         _fsm = new LoloFSM();
         _fsm.AddState(LoloStates.Idle, new Idle(this));
         _fsm.AddState(LoloStates.Runaway, new Runaway(this));
@@ -48,19 +46,6 @@ public class Lolo : MonoBehaviour
         _fsm.Update();
     }
 
-    public void TakeDamage(float val)
-    {
-        _myAudioSource.clip = _takeDamageSFX;
-        if (!_myAudioSource.isPlaying)
-        {
-            _myAudioSource.Play();
-        }
-        _life -= val;
-
-        Instantiate(blood, transform.position, transform.rotation, this.transform);
-        if (_life <= 0) Debug.Log("F LOLo");
-
-    }
 
     public void FollowLola()
     {
@@ -82,7 +67,7 @@ public class Lolo : MonoBehaviour
     public bool CheckHP()
     {
         //si su vida esta pordebajo del threshold, huye
-        if (_life <= _HPthreshold)
+        if (_healthManager.getHealth() <= _HPthreshold)
             return true;
         return false;
     }

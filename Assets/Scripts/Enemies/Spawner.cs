@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] List<GameObject> _spawns;
     [SerializeField] List<Enemy> _allEnemies;
+    [SerializeField] bool _level4;
+    [SerializeField] float _chaseRadius;
 
 
     private void Awake()
@@ -14,6 +16,8 @@ public class Spawner : MonoBehaviour
         {
             Enemy enemy = new EnemyBuilder(_allEnemies[Random.Range(0, 2)])
                             .SetPosition(spawn.transform.position.x, spawn.transform.position.y, spawn.transform.position.z)
+                            .SetLevel4(_level4)
+                            .SetChaseRadius(_chaseRadius)
                             .Done();
         }
 

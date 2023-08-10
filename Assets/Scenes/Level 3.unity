@@ -10298,6 +10298,8 @@ MonoBehaviour:
   _allEnemies:
   - {fileID: 5452547552819656228, guid: 7141dc1bf3821214d9146aa0a8b45a8a, type: 3}
   - {fileID: 6097635336344085766, guid: 8ab95f1a2ff3f5d4c82a60dd97ce44b9, type: 3}
+  _level4: 0
+  _chaseRadius: 15
 --- !u!1 &1676270503
 GameObject:
   m_ObjectHideFlags: 0

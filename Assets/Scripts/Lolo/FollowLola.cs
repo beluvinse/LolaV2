@@ -23,17 +23,9 @@ public class FollowLola : CurrentState
 
     public override void Update()
     {
-        if (!_lolo.CheckHP())
-        {
-            // if (_lolo.CheckDistance())
-            {
-                _lolo.FollowLola();
-            }
-        }
-        else
-        {
-            fsm.ChangeState(LoloStates.Runaway);
-        }
+         _lolo.FollowLola();
+
+       
     }
 
 

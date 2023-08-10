@@ -15,7 +15,7 @@ public class RangedZombie : Enemy
         if(type == TypeOfEnemy.Boss)
             ChasePlayer(FlyweightPointer.Boss.chaseRadius, FlyweightPointer.Boss.attackRadius);
         else if(type == TypeOfEnemy.Ranged)
-            ChasePlayer(FlyweightPointer.RangeZombie.chaseRadius, FlyweightPointer.RangeZombie.attackRadius);
+            ChasePlayer(_chaseRadius, _attackRadius);
 
     }
 

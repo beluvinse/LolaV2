@@ -27,7 +27,7 @@ public class CommonZombie : Enemy
 
     private void FixedUpdate()
     {
-        ChasePlayer(FlyweightPointer.CommonZombie.chaseRadius, FlyweightPointer.CommonZombie.attackRadius);
+        ChasePlayer(_chaseRadius, _attackRadius);
     }
 
 

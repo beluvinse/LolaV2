@@ -18,6 +18,7 @@ public class HealthManager : MonoBehaviour
 
     private void Start()
     {
+        _health = _maxHealth;
         _myAudioSource = GetComponent<AudioSource>();
         _canTakeDamage = true;
     }
