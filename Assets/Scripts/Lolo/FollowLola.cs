@@ -25,7 +25,7 @@ public class FollowLola : CurrentState
     {
         if (!_lolo.CheckHP())
         {
-            //if (_lolo.CheckDistance())
+            // if (_lolo.CheckDistance())
             {
                 _lolo.FollowLola();
             }
