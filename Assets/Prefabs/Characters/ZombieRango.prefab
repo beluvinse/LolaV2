@@ -1876,7 +1876,7 @@ MonoBehaviour:
   _damage: 15
   type: 1
   _player: {fileID: 8532524549298729441, guid: 54ed7c66bd09dac41a5efb3905837367, type: 3}
-  _chaseRadius: 10
+  _chaseRadius: 15
   _attackRadius: 8
   _attackDelay: 1
   _isAttacking: 0

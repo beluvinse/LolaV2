@@ -41,7 +41,6 @@ public abstract class Enemy : MonoBehaviour
         _myAnim = GetComponentInChildren<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _myAnim.SetBool("moving", false);
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
 
         switch (type)
         {

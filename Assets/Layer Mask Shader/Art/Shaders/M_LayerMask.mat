@@ -49,10 +49,10 @@ Material:
     m_Floats:
     - _MaskDiffuse: 1
     - _MaskOpacity: 0.5
-    - _MaskSize: 1
+    - _MaskSize: 0
     - _QueueControl: 1
     - _QueueOffset: 0
     m_Colors:
-    - _PlayerPosition: {r: 0.5, g: 0.4098266, b: 24.1608, a: 0}
+    - _PlayerPosition: {r: 0.5, g: 0.4098267, b: 24.1608, a: 0}
     - _WallColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
