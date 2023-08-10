@@ -8,6 +8,7 @@ TagManager:
   - Key
   - Wall
   - Boss
+  - Lolo
   layers:
   - Default
   - TransparentFX
