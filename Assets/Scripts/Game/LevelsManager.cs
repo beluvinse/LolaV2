@@ -12,7 +12,7 @@ public class LevelsManager : MonoBehaviour
         var player = other.GetComponent<PlayerMovement>();
 
         if (other)
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 

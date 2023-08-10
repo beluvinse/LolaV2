@@ -13,6 +13,7 @@ public class Idle : CurrentState
 
     public override void OnEnter()
     {
+        _lolo.myAnim.SetBool("followLola", false); //esto creo q deberia estar en los onexit d los otros estados
     }
 
     public override void OnExit()

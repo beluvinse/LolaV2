@@ -13,7 +13,7 @@ public class FollowLola : CurrentState
 
     public override void OnEnter()
     {
-
+        _lolo.myAnim.SetBool("followLola", true);
     }
 
     public override void OnExit()

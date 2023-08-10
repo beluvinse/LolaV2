@@ -14,7 +14,7 @@ public class Lolo : MonoBehaviour
     [Header("Follow")]
     [SerializeField] protected float _followRadius;
 
-    private Animator _myAnim;
+    public Animator myAnim;
     private AudioSource _myAudioSource;
 
 
@@ -26,7 +26,7 @@ public class Lolo : MonoBehaviour
 
     private void Awake()
     {
-        _myAnim = GetComponentInChildren<Animator>();
+        myAnim = GetComponent<Animator>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -64,7 +64,6 @@ public class Lolo : MonoBehaviour
     {
         _navMeshAgent.SetDestination(_player.position);
         transform.LookAt(_player);
-
     }
 
     public void RunAway()
@@ -75,7 +74,8 @@ public class Lolo : MonoBehaviour
     public bool CheckHP()
     {
         //si su vida esta pordebajo del threshold, huye
-        if (_life <= _HPthreshold) return true;
+        if (_life <= _HPthreshold)
+            return true;
         return false;
     }
 
