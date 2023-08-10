@@ -243,8 +243,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _life: 100
   _HPthreshold: 0
+  _separationRadius: 5
   _player: {fileID: 0}
   _followRadius: 8
+  myAnim: {fileID: 0}
   blood: {fileID: 0}
   _takeDamageSFX: {fileID: 8300000, guid: 8482e07518d88e24cb9f9daeef7683f7, type: 3}
 --- !u!195 &1234631512
@@ -258,7 +260,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 15
-  m_Acceleration: 8
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 100
   m_StoppingDistance: 5

@@ -8625,6 +8625,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1348377272}
+    - target: {fileID: 1234631512, guid: 6453b2536a687c04f99da67174596b6b, type: 3}
+      propertyPath: m_AutoBraking
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 352884130759050390, guid: 6453b2536a687c04f99da67174596b6b, type: 3}
       propertyPath: m_Name
       value: Lolo

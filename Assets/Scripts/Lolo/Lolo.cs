@@ -8,6 +8,8 @@ public class Lolo : MonoBehaviour
     [Header("Values")]
     [SerializeField] protected float _life;
     [SerializeField] protected float _HPthreshold;
+    [SerializeField] float _separationRadius;
+
 
     [SerializeField] protected Transform _player;
 
@@ -64,6 +66,12 @@ public class Lolo : MonoBehaviour
     {
         _navMeshAgent.SetDestination(_player.position);
         transform.LookAt(_player);
+
+        if (Vector3.Distance(transform.position, _player.position) <= _separationRadius)
+            myAnim.SetBool("followLola", false);
+        else
+            myAnim.SetBool("followLola", true);
+
     }
 
     public void RunAway()
