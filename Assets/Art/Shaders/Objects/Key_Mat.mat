@@ -60,5 +60,5 @@ Material:
     - _Range: 8
     m_Colors:
     - _FloorColor: {r: 0.14150935, g: 0.12482195, b: 0.12482195, a: 0}
-    - _PlayerPosition: {r: -5.2995267, g: 0.89499915, b: 13.892438, a: 0}
+    - _PlayerPosition: {r: -46.776367, g: 0.8949995, b: -77.64, a: 0}
   m_BuildTextureStacks: []
