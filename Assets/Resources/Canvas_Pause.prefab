@@ -1248,9 +1248,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3415629800788834580}
-        m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1699015737673996348}
+        m_TargetAssemblyTypeName: ScreenPause, Assembly-CSharp
+        m_MethodName: BTN_ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
